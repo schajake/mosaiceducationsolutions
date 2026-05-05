@@ -1184,21 +1184,21 @@
       <div class="form-row">
         <div class="form-field">
           <label for="name">Your name</label>
-          <input type="text" id="name" placeholder="Jane Smith" required>
+          <input type="text" id="name" name="name" placeholder="Jane Smith" required>
         </div>
         <div class="form-field">
           <label for="title">Your role</label>
-          <input type="text" id="title" placeholder="Principal, SAP Coordinator...">
+          <input type="text" id="title" name="title" placeholder="Principal, SAP Coordinator...">
         </div>
       </div>
       <div class="form-row">
         <div class="form-field">
           <label for="school">School name</label>
-          <input type="text" id="school" placeholder="Lincoln High School">
+          <input type="text" id="school" name="school" placeholder="Lincoln High School">
         </div>
         <div class="form-field">
           <label for="size">Approximate enrollment</label>
-          <select id="size">
+          <select id="size" name="enrollment">
             <option value="" disabled selected>Select range</option>
             <option>Under 300</option>
             <option>300–600</option>
@@ -1209,11 +1209,11 @@
       </div>
       <div class="form-field">
         <label for="email">Email address</label>
-        <input type="email" id="email" placeholder="you@school.org" required>
+        <input type="email" id="email" name="email" placeholder="you@school.org" required>
       </div>
       <div class="form-field">
         <label for="message">What's your biggest coordination headache right now? (optional)</label>
-        <textarea id="message" placeholder="e.g. Referrals tracked in email, no shared history between staff..."></textarea>
+        <textarea id="message" name="message" placeholder="e.g. Referrals tracked in email, no shared history between staff..."></textarea>
       </div>
       <button type="submit" class="form-submit">
         Send message
