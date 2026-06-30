@@ -183,7 +183,7 @@
 
   /* HERO */
   #home {
-    min-height: 100vh;
+    min-height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 60px;
@@ -191,10 +191,10 @@
   }
 
   .hero-left {
-    padding: 6rem 4rem 5rem 4rem;
+    padding: 5rem 4rem 5rem 4rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     background: var(--paper);
   }
 
@@ -275,10 +275,10 @@
   .hero-right {
     background: var(--paper-warm);
     border-left: 1px solid var(--rule);
-    padding: 6rem 4rem 5rem 4rem;
+    padding: 5rem 4rem 5rem 4rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     overflow: hidden;
   }
@@ -297,9 +297,10 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 6px;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     position: relative;
     z-index: 1;
+    max-width: 280px;
   }
 
   .tile {
