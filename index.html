@@ -278,7 +278,8 @@
     padding: 5rem 4rem 5rem 4rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
   }
@@ -296,11 +297,11 @@
   .mosaic-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
+    gap: 10px;
     margin-bottom: 2.5rem;
     position: relative;
     z-index: 1;
-    max-width: 420px;
+    width: 100%;
   }
 
   .tile {
@@ -337,6 +338,7 @@
     gap: 2rem;
     position: relative;
     z-index: 1;
+    width: 100%;
   }
 
   .hero-stat {
