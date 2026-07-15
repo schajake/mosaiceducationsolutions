@@ -886,8 +886,9 @@
 
     /* Hero */
     #home { grid-template-columns: 1fr; min-height: auto; }
-    .hero-right { display: none; }
-    .hero-left { padding: 5rem 1.5rem 4rem; }
+    .hero-right { display: flex; border-left: none; border-top: 1px solid var(--rule); padding: 3rem 1.5rem; }
+    .hero-left { padding: 5rem 1.5rem 3rem; }
+    .mosaic-grid { max-width: 280px; }
     h1 { font-size: clamp(32px, 8vw, 44px); }
     .hero-body { font-size: 16px; max-width: 100%; }
 
