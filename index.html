@@ -6,10 +6,10 @@
 <meta name="color-scheme" content="light only">
 <meta name="supported-color-schemes" content="light">
 <title>Mosaic Education Solutions</title>
-<meta name="description" content="Google Workspace tools for school support teams — built by a school psychologist who uses them every day. SAT coordination, IEP due process tracking, and counselor caseload management.">
+<meta name="description" content="Google Workspace tools for school support teams, built by a school psychologist who uses them every day. Student referrals, Tier II progress monitoring, Tier III case management, IEP due process tracking, and IEP goal and service tracking for special education staff.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect x='0' y='0' width='12' height='12' rx='2' fill='%233d6b4f'/%3E%3Crect x='14' y='0' width='6' height='6' rx='1.5' fill='%236a9b7c'/%3E%3Crect x='22' y='0' width='6' height='6' rx='1.5' fill='%23d8d4c8'/%3E%3Crect x='14' y='8' width='14' height='6' rx='1.5' fill='%233d6b4f' opacity='.35'/%3E%3Crect x='0' y='14' width='6' height='6' rx='1.5' fill='%23d8d4c8'/%3E%3Crect x='8' y='14' width='6' height='6' rx='1.5' fill='%236a9b7c' opacity='.6'/%3E%3Crect x='0' y='22' width='14' height='6' rx='1.5' fill='%233d6b4f' opacity='.2'/%3E%3Crect x='16' y='16' width='12' height='12' rx='2' fill='%233d6b4f'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -109,7 +109,7 @@
 
   .nav-logo-sub {
     font-family: 'DM Sans', sans-serif;
-    font-size: 8px;
+    font-size: 9px;
     font-weight: 500;
     color: var(--ink-faint);
     letter-spacing: 0.18em;
@@ -347,6 +347,7 @@
 
   .hero-stat-num {
     font-family: 'Cormorant Garamond', serif;
+    font-variant-numeric: lining-nums;
     font-size: 30px;
     font-weight: 600;
     color: var(--ink);
@@ -631,7 +632,7 @@
   }
 
   .tool-desc {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     color: #b0b0a8;
     line-height: 1.75;
@@ -647,6 +648,28 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #8a8a82;
+  }
+
+  .tool-card.featured { grid-column: 1 / -1; }
+
+  .tool-modules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px 28px;
+    margin: 1.25rem 0 0.25rem;
+  }
+
+  .tool-module {
+    font-size: 14px;
+    color: #b0b0a8;
+    line-height: 1.6;
+  }
+
+  .tool-module strong {
+    display: block;
+    color: var(--white);
+    font-weight: 500;
+    margin-bottom: 3px;
   }
 
   /* ABOUT */
@@ -878,6 +901,62 @@
     transform: translateY(0);
   }
 
+  /* LIST STYLE: open hairline lists instead of boxes */
+  .pain-list { gap: 0; }
+  .pain-list li {
+    padding: 15px 0;
+    background: none;
+    border-radius: 0;
+    border-left: none;
+    border-top: 1px solid var(--rule);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .pain-list li:last-child { border-bottom: 1px solid var(--rule); }
+  .pain-icon { margin-top: 2px; }
+
+  .features-grid {
+    gap: 0 48px;
+    background: none;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+  .feature-card {
+    background: none;
+    padding: 22px 0 30px;
+    border-top: 1px solid var(--rule);
+  }
+  .feature-card:hover { background: none; }
+  .feature-num {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #2d5039;
+    margin-bottom: 10px;
+  }
+  .feature-title { font-size: 17px; margin-bottom: 8px; }
+  .feature-body { font-size: 14px; }
+
+  .tool-modules { gap: 0 32px; }
+  .tool-module {
+    padding: 12px 0 14px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .credential-list li { align-items: flex-start; line-height: 1.6; }
+  .cred-dot { margin-top: 8px; width: 6px; height: 6px; }
+
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .tool-roles {
+    margin-top: 1.25rem;
+    font-size: 13px;
+    color: #8a8a82;
+    line-height: 1.6;
+  }
+
   /* RESPONSIVE */
   @media (max-width: 860px) {
     /* Nav: hide links, show burger */
@@ -901,10 +980,11 @@
 
     /* Tools */
     .tools-grid { grid-template-columns: 1fr; }
+    .tool-modules { grid-template-columns: 1fr; }
 
     /* Features */
     .features-grid { grid-template-columns: 1fr; }
-    .feature-card { padding: 1.5rem; }
+    .feature-card { padding: 20px 0 24px; }
 
     /* About */
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -999,7 +1079,7 @@
       </div>
       <div class="hero-stat">
         <div class="hero-stat-num">1 place</div>
-        <div class="hero-stat-label">Referrals, contacts,<br>activity — all in one place</div>
+        <div class="hero-stat-label">Referrals, plans, contacts,<br>and cases, together</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-num">Live</div>
@@ -1050,38 +1130,28 @@
 <section id="what">
   <div class="section-inner">
     <div class="section-label fade-up">What we do</div>
-    <h2 class="fade-up">A shared portal, <em>built for<br>the way your team actually works.</em></h2>
-    <p class="what-intro fade-up">I set up the tool inside your school's existing Google Workspace — no new vendor contracts, no student data leaving your environment — and train your team to use it from day one.</p>
+    <h2 class="fade-up">Set up for your school, <em>supported by<br>someone who does this work.</em></h2>
+    <p class="what-intro fade-up">I set up the portal inside your school's existing Google Workspace and train your team to use it. After that, I keep it running and stay a message away.</p>
     <div class="features-grid fade-up">
       <div class="feature-card">
         <div class="feature-num">01</div>
         <div class="feature-title">Configured for your school</div>
-        <div class="feature-body">Set up around your team structure, your staff, and your referral workflow — your dropdown values, your labels, your access list. Not a generic template you have to bend your process around. New functionality beyond that is scoped and quoted before any work starts.</div>
+        <div class="feature-body">Set up around your team structure and your workflow: your team names, your term calendar, the thresholds you flag on, your labels, and a permission list your admins manage inside the app. Not a generic template you have to bend your process around. New functionality beyond that is scoped and quoted before any work starts.</div>
       </div>
       <div class="feature-card">
         <div class="feature-num">02</div>
-        <div class="feature-title">Centralized case management</div>
-        <div class="feature-body">All referrals, activity logs, and family contacts in one place. Full history per student, visible to everyone on the team who needs it.</div>
+        <div class="feature-title">Staff training included</div>
+        <div class="feature-body">One live 60-minute walkthrough with your team, so everyone is confident on day one, not just the person who set it up. Refresher sessions draw from your annual support hours.</div>
       </div>
       <div class="feature-card">
         <div class="feature-num">03</div>
-        <div class="feature-title">Inactivity alerts</div>
-        <div class="feature-body">Automatic flags for students who haven't had a check-in recently, so nothing slips through the cracks during busy stretches.</div>
+        <div class="feature-title">Ongoing support</div>
+        <div class="feature-body">Unlimited bug fixes, plus ten hours a year of support, refresher training, and configuration changes. Responses within two business days, from someone who understands student support work, not a help desk that's never heard of a Student Assistance Team.</div>
       </div>
       <div class="feature-card">
         <div class="feature-num">04</div>
-        <div class="feature-title">Staff training included</div>
-        <div class="feature-body">One live 60-minute walkthrough with your team, so everyone is confident on day one — not just the person who set it up. Refresher sessions draw from your annual support hours.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-num">05</div>
-        <div class="feature-title">Ongoing support</div>
-        <div class="feature-body">Unlimited bug fixes, plus ten hours a year of support, refresher training, and configuration changes. Responses within two business days, from someone who understands student support work — not a help desk that's never heard of a Student Assistance Team.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-num">06</div>
         <div class="feature-title">Your data, your control</div>
-        <div class="feature-body">Everything lives in your Google Sheets, inside your own Workspace. No third-party storage. If you stop working with me, you keep the tool and every record — what you'd lose is support and updates, not your data.</div>
+        <div class="feature-body">Everything lives in a Google Sheet inside your own Workspace, owned by a district account. Staff use the app; nobody has to be handed the spreadsheet. Who can open what is set by a permission list your admins manage inside the portal. No third-party storage. If you stop working with me, you keep the tool and every record. What you'd lose is support and updates, not your data.</div>
       </div>
     </div>
   </div>
@@ -1092,11 +1162,11 @@
   <div class="section-inner">
     <div class="section-label fade-up">Our tools</div>
     <h2 class="fade-up">A growing toolkit for<br><em>school support teams.</em></h2>
-    <p class="tools-intro fade-up">Every tool I build runs inside Google Workspace, requires no new vendor contracts, and is designed by someone who uses it. Each one targets a specific role — because the school psychologist, the counselor, the interventionist, and the student support coordinator all have different jobs.</p>
+    <p class="tools-intro fade-up">Everything I build runs inside Google Workspace, needs no new vendor contract, and is used daily by the person who built it. The portal covers the whole support pipeline for the team. The other two are built for special education staff: one for IEP goals and services, one for the school psychologist's evaluation caseload.</p>
     <div class="tools-grid fade-up">
 
       <!-- Student Success Portal -->
-      <div class="tool-card">
+      <div class="tool-card featured">
         <span class="tool-badge live">Live</span>
         <svg class="tool-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
           <rect x="4" y="4" width="28" height="28" rx="3"/>
@@ -1106,13 +1176,57 @@
           <circle cx="14.5" cy="8.5" r="1.5" fill="currentColor" stroke="none"/>
         </svg>
         <div class="tool-name">Student Success Portal</div>
-        <div class="tool-tagline">Student Support Team Coordination</div>
-        <div class="tool-desc">A shared portal for referrals, activity logs, team contacts, and intervention tracking — organized so your whole team can read and update student records in real time. Built for the teams that gather around struggling students to figure out how to help, whatever your school calls that meeting.</div>
-        <div class="tool-audience">For: Support coordinators · Counselors · Administrators</div>
+        <div class="tool-tagline">Referral to Tier III, in one place</div>
+        <div class="tool-desc">One portal for every tier of student support. Students surface on their own, the team works from one shared record, and every handoff carries the full history with it. Your school sets the names, the terms, the thresholds, and who can open what.</div>
+        <div class="tool-modules">
+          <div class="tool-module"><strong>Students surface on their own</strong>Set the grade, attendance, and behavior thresholds for Tier II and Tier III. Students who cross them are flagged for the team, with no list-building.</div>
+          <div class="tool-module"><strong>Progress you can see</strong>Each student's grades and attendance charted over time, so the team sees the trend, not just today's number.</div>
+          <div class="tool-module"><strong>Tier I Snapshot</strong>Building-level charts of grades, credits, and enrollment, so your leadership team sees the whole school at a glance.</div>
+          <div class="tool-module"><strong>Emails in seconds</strong>Teacher updates and parent emails come pre-written from the student's record, with the right teachers already filled in. Review, then send from your own email.</div>
+          <div class="tool-module"><strong>Referrals in about 90 seconds</strong>Roster-connected and strength-based. The teacher who referred can see what happened next.</div>
+          <div class="tool-module"><strong>Handoffs keep the history</strong>Move a student from Tier II to Tier III and the case opens with everything already attached. Nothing gets retyped.</div>
+          <div class="tool-module"><strong>Tasks that don't get lost</strong>Assign a next step to a teammate with a due date. A weekday reminder email shows what's waiting, with no student details in it.</div>
+          <div class="tool-module"><strong>No one falls off the radar</strong>Students with no recent check-in are flagged automatically.</div>
+          <div class="tool-module"><strong>Family contacts logged once</strong>Every call and email is visible to both the Tier II and Tier III teams working with that student.</div>
+        </div>
+        <div class="tool-roles">Includes: Staff referrals · Tier I Snapshot · Tier II team · Interventionist workspace · Tier III case management</div>
+        <div class="tool-audience">For: Support coordinators · Counselors · Interventionists · Administrators</div>
+      </div>
+
+
+      <!-- IEP Goal & Service Tracker -->
+      <div class="tool-card featured">
+        <span class="tool-badge pilot">In pilot</span>
+        <svg class="tool-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 28h28"/>
+          <path d="M4 28V8"/>
+          <path d="M4 14h28" stroke-dasharray="3 2" opacity="0.5"/>
+          <path d="M6 26l5-4 5-3 5-5 5-2 4-4"/>
+          <circle cx="6" cy="26" r="1.5" fill="currentColor" stroke="none"/>
+          <circle cx="11" cy="22" r="1.5" fill="currentColor" stroke="none"/>
+          <circle cx="16" cy="19" r="1.5" fill="currentColor" stroke="none"/>
+          <circle cx="21" cy="14" r="1.5" fill="currentColor" stroke="none"/>
+          <circle cx="26" cy="12" r="1.5" fill="currentColor" stroke="none"/>
+          <circle cx="30" cy="8" r="1.5" fill="currentColor" stroke="none"/>
+          <path d="M16 19v6" stroke-dasharray="1.5 1.5" opacity="0.6"/>
+        </svg>
+        <div class="tool-name">IEP Goal &amp; Service Tracker</div>
+        <div class="tool-tagline">Progress monitoring for special education staff</div>
+        <div class="tool-desc">Progress monitoring shouldn't live in a dozen spreadsheets and sticky notes. The IEP Goal &amp; Service Tracker gives special education staff one place to record intervention data, track student progress toward IEP goals, and see what's coming due, without leaving the Google tools their school already uses.</div>
+        <div class="tool-modules">
+          <div class="tool-module"><strong>Goal tracking by area</strong>Goals sit under consistent goal areas, so data stays comparable across students and staff.</div>
+          <div class="tool-module"><strong>Fast logging</strong>Record progress and intervention data as you work, then review a student's history at a glance.</div>
+          <div class="tool-module"><strong>Direct service tracking</strong>A record of services delivered, kept alongside goal progress.</div>
+          <div class="tool-module"><strong>Deadline awareness</strong>Annual review and evaluation due dates, imported from your district's records or entered by hand, always in view next to the goals they belong to.</div>
+          <div class="tool-module"><strong>Reliable student records</strong>Organized by student ID, so students with similar names never get mixed up.</div>
+          <div class="tool-module"><strong>Secure and internal</strong>Runs entirely within your district's Google Workspace, with access limited to approved staff.</div>
+          <div class="tool-module"><strong>Grows without breaking</strong>New features roll out without disrupting data you've already entered.</div>
+        </div>
+        <div class="tool-audience">For: Special education teachers &amp; case managers · Interventionists · School psychologists · Related service providers</div>
       </div>
 
       <!-- School Psychologist Central -->
-      <div class="tool-card">
+      <div class="tool-card featured">
         <span class="tool-badge pilot">In pilot</span>
         <svg class="tool-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M18 6c-2 0-3.5 1-4.2 2.5C12.5 8.2 11 8 10 9c-1.5 1-2 2.5-1.5 4-.8.8-1.5 2-1.5 3.5 0 2 1.2 3.5 3 4.2V26h16v-5.3c1.8-.7 3-2.2 3-4.2 0-1.5-.7-2.7-1.5-3.5.5-1.5 0-3-1.5-4-1-.9-2.5-1-3.8-.5C21.5 7 20 6 18 6z"/>
@@ -1120,51 +1234,17 @@
           <path d="M18 10v3M18 13l2 2"/>
         </svg>
         <div class="tool-name">School Psychologist Central</div>
-        <div class="tool-tagline">IEP Due Process Tracking</div>
-        <div class="tool-desc">Tracks IEP timelines, evaluation due dates, and due process milestones so school psychologists and sped coordinators never miss a compliance deadline. Missing a due process date isn't just an inconvenience — it's a compliance violation with real legal consequences.</div>
-        <div class="tool-audience">For: School psychologists · Sped coordinators · Directors</div>
-      </div>
-
-      <!-- Counselor Contact Log -->
-      <div class="tool-card">
-        <span class="tool-badge pilot">In pilot</span>
-        <svg class="tool-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="14" cy="11" r="5"/>
-          <path d="M4 29c0-5.5 4.5-10 10-10"/>
-          <circle cx="26" cy="20" r="4"/>
-          <path d="M20 32c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
-        </svg>
-        <div class="tool-name">Counselor Contact Log</div>
-        <div class="tool-tagline">Caseload & Contact Tracking</div>
-        <div class="tool-desc">Helps school counselors log student contacts, track caseload activity, and maintain a clear record of outreach and interventions. Designed around the reality that counselors are managing dozens of students at once and need a lightweight, fast way to keep records without it becoming another burden.</div>
-        <div class="tool-audience">For: School counselors · Counseling directors</div>
-      </div>
-
-      <!-- Intervention Progress Tracker -->
-      <div class="tool-card">
-        <span class="tool-badge" style="background:rgba(80,80,180,0.15);color:#9090e0;border:1px solid rgba(80,80,180,0.25);">In development</span>
-        <svg class="tool-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <!-- Chart area -->
-          <path d="M4 28h28"/>
-          <path d="M4 28V8"/>
-          <!-- Goal line -->
-          <path d="M4 14h28" stroke-dasharray="3 2" opacity="0.5"/>
-          <!-- Data line trending up -->
-          <path d="M6 26l5-4 5-3 5-5 5-2 4-4"/>
-          <!-- Data points -->
-          <circle cx="6"  cy="26" r="1.5" fill="currentColor" stroke="none"/>
-          <circle cx="11" cy="22" r="1.5" fill="currentColor" stroke="none"/>
-          <circle cx="16" cy="19" r="1.5" fill="currentColor" stroke="none"/>
-          <circle cx="21" cy="14" r="1.5" fill="currentColor" stroke="none"/>
-          <circle cx="26" cy="12" r="1.5" fill="currentColor" stroke="none"/>
-          <circle cx="30" cy="8"  r="1.5" fill="currentColor" stroke="none"/>
-          <!-- Service marker -->
-          <path d="M16 19v6" stroke-dasharray="1.5 1.5" opacity="0.6"/>
-        </svg>
-        <div class="tool-name">Intervention Progress Tracker</div>
-        <div class="tool-tagline">Progress Monitoring & Intervention Data</div>
-        <div class="tool-desc">Tracks IEP goal progress and Tier II intervention outcomes for special education teachers and interventionists. Supports percentage-based and qualitative goal types, logs service sessions and intervention changes, and automatically generates progress monitoring summaries for quarterly reporting — so writing those updates takes minutes instead of an afternoon. Includes data visualizations with goal lines, trend markers, and service indicators.</div>
-        <div class="tool-audience">For: Special education teachers · Interventionists · Sped coordinators</div>
+        <div class="tool-tagline">Evaluation caseload management</div>
+        <div class="tool-desc">School psychologists juggle evaluation deadlines set by law, assessment requirements that change by disability category, and work split across several providers, often in spreadsheets or paper that don't count days or show what's at risk. School Psychologist Central puts the whole evaluation caseload in one place, so you see what's due, what's late, and what's left before it becomes a compliance problem. It's light enough to run one copy per psychologist or per building.</div>
+        <div class="tool-modules">
+          <div class="tool-module"><strong>Deadline tracking</strong>Counts the days to each legal deadline and flags overdue evaluations automatically.</div>
+          <div class="tool-module"><strong>Checklists by disability category</strong>Assessment requirements for SLD, OHD, ASD, EBD, and DCD are built in.</div>
+          <div class="tool-module"><strong>Caseload dashboard</strong>Students grouped by evaluation wave, with an order that stays put as dates are entered.</div>
+          <div class="tool-module"><strong>Progress that counts your work</strong>Percent complete tracks your own tasks, not the ones handed to speech, OT, or teachers.</div>
+          <div class="tool-module"><strong>Contact log</strong>A record of communication with families and staff, kept with each student.</div>
+          <div class="tool-module"><strong>Roster import</strong>Pulls student lists from district exports, whatever the headers or separators look like.</div>
+        </div>
+        <div class="tool-audience">For: School psychologists · Special education coordinators · Directors</div>
       </div>
 
     </div>
